@@ -11,6 +11,10 @@ app.get('/', function (req, res) {
 app.get('/article-one', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 })
+var counter=0;
+app.get('/counter', function(req,res){
+    rees.send(counter);
+});
 app.get('/article-two', function(req,res){
     res.send('Article two is requested and will be served here');
 });
